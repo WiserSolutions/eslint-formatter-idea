@@ -27,6 +27,8 @@ module.exports = function formatEslintResults(results) {
   let total = 0
 
   results.forEach(({messages, filePath}) => {
+    if (!messages.length) return
+
     total += messages.length
     output += messages.map(message => formatMessage(message, filePath)).join('\n') + '\n\n'
   })
