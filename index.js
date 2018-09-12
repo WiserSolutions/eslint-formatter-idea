@@ -13,8 +13,7 @@ function formatMessage(message, filePath) {
   return (
       `${filePath}:${message.line || 0}:${message.column || 0}\n` +
       `${getMessageType(message)} ${message.message}` +
-      grey(` (${message.ruleId})`) +
-      '\n'
+      grey(` (${message.ruleId})`)
   )
 }
 
@@ -29,11 +28,11 @@ module.exports = function formatEslintResults(results) {
 
   results.forEach(({messages, filePath}) => {
     total += messages.length
-    output += messages.map(message => formatMessage(message, filePath)).join('\n')
+    output += messages.map(message => formatMessage(message, filePath)).join('\n') + '\n\n'
   })
 
   if (total > 0) {
-    output = `${cyan('eslint:')}\n\n${output}\n${red(`\u2716 ${total} problem${total !== 1 ? 's' : ''}`)}`
+    output = `${cyan('eslint:')}\n\n${output}${red(`\u2716 ${total} problem${total !== 1 ? 's' : ''}`)}`
   } else {
     output += `${cyan('eslint: ')}${grey('No problems found')}`
   }
