@@ -1,7 +1,7 @@
 {
   "name": "@wisersolutions/eslint-formatter-idea",
   "description": "Friendly formatter for ESLint that outputs click-through source links for common IDEs",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./ --format './index.js'",
