@@ -18,9 +18,9 @@
   "author": "Jan Konopásek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WiserSolutions/eslint-config/issues"
+    "url": "https://github.com/WiserSolutions/eslint-formatter-idea/issues"
   },
-  "homepage": "https://github.com/WiserSolutions/eslint-config#readme",
+  "homepage": "https://github.com/WiserSolutions/eslint-formatter-idea#readme",
   "devDependencies": {
     "@wisersolutions/eslint-config": "^2.0.1",
     "babel-eslint": "^10.0.3",
