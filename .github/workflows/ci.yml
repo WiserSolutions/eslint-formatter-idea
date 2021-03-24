@@ -15,6 +15,4 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: '@wisersolutions'
     - run: npm i
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.WISER_CI_TOKEN }}
     - run: npm run lint
