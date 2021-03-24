@@ -7,8 +7,6 @@ jobs:
   lint:
     name: lint
     runs-on: ubuntu-latest
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@master
     - uses: actions/setup-node@v1
@@ -17,4 +15,6 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: '@wisersolutions'
     - run: npm i
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - run: npm run lint
